@@ -131,7 +131,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Imports settings from settings_local.py and overwrites vars in this file.
-# settings_local.py is required to run app. Follow instructions in settings_local.template
+# settings_local.py is required to run app locally. Follow instructions in settings_local.template
 try:
     from settings_local import *
 except ImportError:
