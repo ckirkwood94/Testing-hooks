@@ -1,34 +1,34 @@
 function mergeSort(arr) {
-if (arr.length === 1) {
-return arr;
-}
+	if (arr.length === 1) {
+		return arr;
+	}
 
-const middle = Math.floor(arr.length / 2);
-const left = arr.slice(0, middle);
-const right = arr.slice(middle);
+	const middle = Math.floor(arr.length / 2);
+	const left = arr.slice(0, middle);
+	const right = arr.slice(middle);
 
-return merge(mergeSort(left), mergeSort(right));
+	return merge(mergeSort(left), mergeSort(right));
 }
 
 function merge(left, right) {
-let result = [];
-let indexLeft = 0;
-let indexRight = 0;
+	let result = [];
+	let indexLeft = 0;
+	let indexRight = 0;
 
-while (indexLeft < left.length && indexRight < right.length) {
-if (left[indexLeft] < right[indexRight]) {
-result.push(left[indexLeft]);
-indexLeft++;
-} else {
-result.push(right[indexRight]);
-indexRight++;
-}
-}
+	while (indexLeft < left.length && indexRight < right.length) {
+		if (left[indexLeft] < right[indexRight]) {
+			result.push(left[indexLeft]);
+			indexLeft++;
+		} else {
+			result.push(right[indexRight]);
+			indexRight++;
+		}
+	}
 
-return result.concat(left.slice(indexLeft)).concat(right.slice(indexRight));
+	return result.concat(left.slice(indexLeft)).concat(right.slice(indexRight));
 }
 
 mergeSort([1, 6, 3, 2, 4, 7]);
 
-console.log("Hello");
-console.log("should stay single quotes");
+console.log('Hello');
+console.log('should stay single quotes');
