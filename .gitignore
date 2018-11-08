@@ -59,3 +59,6 @@ typings/
 
 # next.js build output
 .next
+
+# settings for django app
+settings_local.py

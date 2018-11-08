@@ -1,0 +1,15 @@
+# Create settings_local.py file
+# Copy & paste template and fill in settings
+# This will change over time as we need to add settings
+
+# DEBUG = True for development False for production
+DEBUG = True
+
+SECRET_KEY = 'enter-secret-key-here'
+
+DATABASE_ENGINE = ''
+DATABASE_NAME = ''
+DATABASE_USER = ''
+DATABASE_PASSWORD = ''
+DATABASE_HOST = ''
+DATABASE_PORT = ''
