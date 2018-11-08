@@ -1,4 +1,4 @@
-# Create settings_local.py file
+# Create settings_local.py file in same folder as template
 # Copy & paste template and fill in settings
 # This will change over time as we need to add settings
 
