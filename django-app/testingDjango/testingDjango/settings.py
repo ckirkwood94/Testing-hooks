@@ -71,12 +71,12 @@ WSGI_APPLICATION = 'testingDjango.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-DATABASE_ENGINE = 'django.db.backends.sqlite3'
-DATABASE_NAME = os.path.join(BASE_DIR, 'db.sqlite3')
-DATABASE_USER = ''
-DATABASE_PASSWORD = ''
-DATABASE_HOST = ''
-DATABASE_PORT = ''
+DATABASE_ENGINE = 'django.db.backends.postgresql'
+DATABASE_NAME = os.environ.get('DATABASE_NAME', '')
+DATABASE_USER = os.environ.get('DATABASE_USER', '')
+DATABASE_PASSWORD = os.environ.get('DATABASE_PASSWORD', '')
+DATABASE_HOST = os.environ.get('DATABASE_HOST', '')
+DATABASE_PORT = os.environ.get('DATABASE_PORT', '')
 
 DATABASES = {
     'default': {
@@ -135,5 +135,4 @@ STATIC_URL = '/static/'
 try:
     from settings_local import *
 except ImportError:
-    raise Exception(
-        "A local_settings.py file is required to run this project. Please open settings_local.template and follow instructions.")
+    pass
